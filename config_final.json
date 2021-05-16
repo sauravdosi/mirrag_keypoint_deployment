@@ -1,0 +1,4 @@
+{"company_id": 1, "company_name":"abc", "api_key": "myapikey", "cameras": [ {"camera_url":"url1","server_ip": "127.0.0.1", "cam_id": 1, "cam_view": "side"},
+																		  {"camera_url":"url2","server_ip": "127.0.0.2", "cam_id": 2, "cam_view": "front"},
+																		  {"camera_url":"url3","server_ip": "127.0.0.3", "cam_id": 3, "cam_view": "side"},
+																		  {"camera_url":"url4","server_ip": "127.0.0.4", "cam_id": 4, "cam_view": "front"}]}

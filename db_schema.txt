@@ -1,0 +1,17 @@
+CREATE TABLE intrusiontben (image_index BIGSERIAL NOT NULL PRIMARY KEY,
+						  company_id VARCHAR(50) NOT NULL,
+						  cam_id INT NOT NULL,
+						  company_name VARCHAR(100) NOT NULL,
+						  model_version VARCHAR(50) NOT NULL,
+						  violation_flag bool NOT NULL,
+						  file_path VARCHAR(500) NOT NULL,
+						  out_data jsonb NOT NULL,
+						  pred_time TIMESTAMP NOT NULL,
+						  created_time TIMESTAMP NOT NULL,
+						  description VARCHAR(200))
+
+CREATE TABLE companytben (
+						 company_id SERIAL NOT NULL PRIMARY KEY,
+						 company_name VARCHAR(50) NOT NULL,
+						 company_code VARCHAR(50) NOT NULL,
+						 auth_key VARCHAR(200) NOT NULL)
