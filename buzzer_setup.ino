@@ -1,4 +1,4 @@
-const int LED = 13;
+const int LED = 13; // assign the correct pin for the input signal of the buzzer
 String command;
 
 void setup() {
@@ -16,7 +16,10 @@ void loop() {
 
     if(command.equals("on")){
       digitalWrite(LED, HIGH);
+      
+      // Time in milliseconds for which the buzzer will be turned on once a trigger is received
       delay(3000);
+      
       digitalWrite(LED, LOW);
     }
 
