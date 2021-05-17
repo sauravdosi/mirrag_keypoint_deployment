@@ -78,6 +78,10 @@ E.g. If cam_id 1 belongs to a side view camera, the server will automatically pr
 You can configure views for each of the cameras in [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json) file.
 
 4. You should be seeing all the images being processed in a window with the instantaneous FPS and an Alert flag if there is a violation.
+![image](https://user-images.githubusercontent.com/45575805/118495670-0a63c500-b741-11eb-93cd-ee2587e3f84c.png)
+![image](https://user-images.githubusercontent.com/45575805/118495738-1cddfe80-b741-11eb-8d39-e47ebc582cd3.png)
+![image](https://user-images.githubusercontent.com/45575805/118496342-abeb1680-b741-11eb-8bad-877ad4db0a52.png)
+
 
 
 
