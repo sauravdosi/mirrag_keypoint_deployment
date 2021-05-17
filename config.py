@@ -47,7 +47,7 @@ class ConfigTF:
         elif key in (self.parameters):
             return self.parameters[key]
         else:
-            with open('./config_final.json') as json_file:
+            with open('./camdata.json') as json_file:
                 data = json.load(json_file)
                 if key in data:
                     return data[key]
