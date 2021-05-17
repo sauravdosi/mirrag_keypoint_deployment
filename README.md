@@ -28,6 +28,28 @@ This command will take a while to execute and install all the required packages.
 
 6. Make changes in [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json) to edit the camera's client IP, camera view and other specifications as required.
 
+## Setting up the Buzzer:
+
+1. If the microprocessor is an Arduino device, download [Arduinio IDE ](https://www.arduino.cc/en/Main/Software_)on your local machine and [buzzer_setup.ino]() using Arduino IDE.
+3. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by going to Tools options in the toolbar of the IDE and checking for the port of the current microproessor.
+4. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in [server.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/server.py) can be uncommented.
+```
+#line 17
+# from buzzer import *
+
+#line 160
+# buzzer_on()
+```
+These lines will import buzzer.py and call a function that sends a message to the microprocessor through serial communication which triggers the buzzer.
+5.  Make changes in the [buzzer_setip.ino]() file to change the duration of the buzzer's ON status. To do this, change the following line in the code:
+
+```
+// Time in milliseconds for which the buzzer will be turned on once a trigger is received
+   delay(3000);
+```
+6. Once this is done, compile and upload the buzzer_setup.ino to the microprocessor. Whenever buzzer.py is executed, it will turn on the buzzer for the desired duration forever until a new code or .ino file is dumped to the microprocessor.
+
+
 ## Architecture:
 
 
@@ -58,26 +80,6 @@ You can configure views for each of the cameras in [camdata.json](https://github
 4. You should be seeing all the images being processed in a window with the instantaneous FPS and an Alert flag if there is a violation.
 
 
-## Setting up the Buzzer:
-
-1. If the microprocessor is an Arduino device, download Arduinio IDE on your local machine.
-2. Download this code and open it using Arduino IDE.
-3. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by going to Tools options in the toolbar of the IDE and checking for the port of the current microproessor.
-4. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in [server.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/server.py) can be uncommented.
-```
-#line 17
-# from buzzer import *
-
-#line 160
-# buzzer_on()
-```
-These lines will import buzzer.py and call a function that sends a message to the microprocessor through serial communication which triggers the buzzer.
-5.  Make changes in the buzzer_setip.ino file to change the duration of the buzzer's ON status. To do this, change the following line in the code:
-
-```
-
-```
-6. Once this is done, compile and upload the buzzer_setup.ino to the microprocessor. Whenever buzzer.py is executed, it will turn on the buzzer for the desired duration forever until a new code or .ino file is dumped to the microprocessor.
 
 ## Activating Cronjob:
 
