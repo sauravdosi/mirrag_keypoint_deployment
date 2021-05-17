@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 This command will take a while to execute and install all the required packages.
 
-4. Download the keypoint-model detection [weights](http://download.tensorflow.org/models/object_detection/tf2/20200711/centernet_resnet50_v1_fpn_512x512_kpts_coco17_tpu-8.tar.gz). Unzip the weights file in the main directory and name the directory as weights.
+4. Download the keypoint-model detection [weights](http://download.tensorflow.org/models/object_detection/tf2/20200711/centernet_resnet50_v1_fpn_512x512_kpts_coco17_tpu-8.tar.gz). Unzip this weights folder in the main directory and rename the directory as weights.
 5. Open the [config.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/config.py) file and make changes in the following fields:
 * Verify and edit the Database credentials if necessary
 * Edit all the path fields as required
@@ -53,3 +53,7 @@ python client.py --cam_id 0
 ```
 The value argument --cam_id is read from the camdata.json. Make sure to run the client.py file for whichever camera you need to run the model for.
 E.g. If cam_id 0 belongs to a side view camera, the server will automatically process the feed for side view.
+
+## Activating Cronjob:
+
+If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the cronjob.py file at the end of each day.
