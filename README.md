@@ -90,4 +90,9 @@ You can configure views for each of the cameras in [camdata.json](https://github
 
 ## Activating Cronjob:
 
-If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the [cronjob.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/cronjob.py) file at the end of each day.
+1. If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the [cronjob.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/cronjob.py) file at the end of each day.
+2. The cronjob script requires the "out_path" variable from config.py to locate the images directory. It also needs the "retention_period" variable to decide which directory of images is to be deleted. The script when executes, logs all the information in trash_log.txt in the following format.
+
+```
+On 2021/05/17-23:15:25:204579, 74 files were deleted from /Users/sauravdosi/Documents/GitHub/mirrag_keypoint_deployment/violations_data/2021/05/15.
+```
