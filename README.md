@@ -56,9 +56,28 @@ E.g. If cam_id 1 belongs to a side view camera, the server will automatically pr
 You can configure views for each of the cameras in [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json) file.
 
 4. You should be seeing all the images being processed in a window with the instantaneous FPS and an Alert flag if there is a violation.
-5. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by downloading Arduino IDE, going to Tools options in the toolbar and checking for the port of the current microproessor.
-6. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in the code can be uncommented.
-7.  
+
+
+## Setting up the Buzzer:
+
+1. If the microprocessor is an Arduino device, download Arduinio IDE on your local machine.
+2. Download this code and open it using Arduino IDE.
+3. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by going to Tools options in the toolbar of the IDE and checking for the port of the current microproessor.
+4. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in [server.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/server.py) can be uncommented.
+```
+#line 17
+# from buzzer import *
+
+#line 160
+# buzzer_on()
+```
+These lines will import buzzer.py and call a function that sends a message to the microprocessor through serial communication which triggers the buzzer.
+5.  Make changes in the buzzer_setip.ino file to change the duration of the buzzer's ON status. To do this, change the following line in the code:
+
+```
+
+```
+6. Once this is done, compile and upload the buzzer_setup.ino to the microprocessor. Whenever buzzer.py is executed, it will turn on the buzzer for the desired duration forever until a new code or .ino file is dumped to the microprocessor.
 
 ## Activating Cronjob:
 
