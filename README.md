@@ -52,6 +52,7 @@ These lines will import buzzer.py and call a function that sends a message to th
 
 ## Architecture:
 
+![P G - Staircase Model Architecture 001](https://user-images.githubusercontent.com/45575805/118499214-58c69300-b744-11eb-8189-ab2dc16220dc.jpeg)
 
 
 ## Running the Model:
