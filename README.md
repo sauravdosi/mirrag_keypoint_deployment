@@ -49,10 +49,16 @@ python server.py
 3. Open another Anaconda prompt and activate the virtual environment there as well. Now run the following command:
 
 ```
-python client.py --cam_id 0
+python client.py --cam_id 1
 ```
-The value argument --cam_id is read from the camdata.json. Make sure to run the client.py file for whichever camera you need to run the model for.
-E.g. If cam_id 0 belongs to a side view camera, the server will automatically process the feed for side view.
+The value argument --cam_id is read from the [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json). Make sure to run the client.py file for whichever camera you need to run the model for.
+E.g. If cam_id 1 belongs to a side view camera, the server will automatically process the feed for side view.
+You can configure views for each of the cameras in [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json) file.
+
+4. You should be seeing all the images being processed in a window with the instantaneous FPS and an Alert flag if there is a violation.
+5. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by downloading Arduino IDE, going to Tools options in the toolbar and checking for the port of the current microproessor.
+6. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in the code can be uncommented.
+7.  
 
 ## Activating Cronjob:
 
