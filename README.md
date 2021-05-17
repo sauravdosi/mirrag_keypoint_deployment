@@ -30,7 +30,7 @@ This command will take a while to execute and install all the required packages.
 
 ## Setting up the Buzzer:
 
-1. If the microprocessor is an Arduino device, download [Arduinio IDE ](https://www.arduino.cc/en/Main/Software_)on your local machine and [buzzer_setup.ino]() using Arduino IDE.
+1. If the microprocessor is an Arduino device, download [Arduinio IDE](https://www.arduino.cc/en/Main/Software_)on your local machine and [buzzer_setup.ino]() using Arduino IDE.
 3. If you have your buzzer connected to your local machine via an USB port, you will first have to find out the serial address of the micrprocessor. This can be done by going to Tools options in the toolbar of the IDE and checking for the port of the current microproessor.
 4. Once the port of the buzzer device is known, it can be edited in the config.py file and the following two lines in [server.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/server.py) can be uncommented.
 ```
@@ -91,7 +91,7 @@ You can configure views for each of the cameras in [camdata.json](https://github
 ## Activating Cronjob:
 
 1. If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the [cronjob.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/cronjob.py) file at the end of each day.
-2. The cronjob script requires the "out_path" variable from config.py to locate the images directory. It also needs the "retention_period" variable to decide which directory of images is to be deleted. The script when executes, logs all the information in trash_log.txt in the following format.
+2. The cronjob script requires the "out_path" variable from [config.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/config.py) to locate the images directory. It also needs the "retention_period" variable to decide which directory of images is to be deleted. The script when executes, logs all the information in [trash_log.txt](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/trash_log.txt) in the following format.
 
 ```
 On 2021/05/17-23:15:25:204579, 74 files were deleted from /Users/sauravdosi/Documents/GitHub/mirrag_keypoint_deployment/violations_data/2021/05/15.
