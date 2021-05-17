@@ -1,2 +1,2 @@
-## Download weights from this Google Drive link.
+Store weights here.
 
