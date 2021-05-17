@@ -56,4 +56,4 @@ E.g. If cam_id 0 belongs to a side view camera, the server will automatically pr
 
 ## Activating Cronjob:
 
-If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the cronjob.py file at the end of each day.
+If you are using a Windows system, please follow this [YouTube tutorial](https://www.youtube.com/watch?v=CAH0B1ErriI) to execute the [cronjob.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/cronjob.py) file at the end of each day.
