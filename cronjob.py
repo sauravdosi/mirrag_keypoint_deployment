@@ -12,14 +12,6 @@ print("All the images captured on " + str(delete_day) + " will be erased.")
 
 retention_dir = config.get_config("out_path") + "/" + delete_day
 
-# list_dir = os.listdir(retention_dir)
-
-# delete_path = retention_dir + "/" + delete_day
-
-# l2 = os.walk(delete_path)
-# print()
-# folders = os.listdir(violations_dir + str(datetime.today().strftime("%Y")))
-
 totalFiles = 0
 totalDir = 0
 
