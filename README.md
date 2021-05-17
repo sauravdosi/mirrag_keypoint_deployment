@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 This command will take a while to execute and install all the required packages.
 
-4. Download the keypoint-model detection [weights](). Unzip the weights file in the main directory and name the directory as weights.
+4. Download the keypoint-model detection [weights](http://download.tensorflow.org/models/object_detection/tf2/20200711/centernet_resnet50_v1_fpn_512x512_kpts_coco17_tpu-8.tar.gz). Unzip the weights file in the main directory and name the directory as weights.
 5. Open the [config.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/config.py) file and make changes in the following fields:
 * Verify and edit the Database credentials if necessary
 * Edit all the path fields as required
