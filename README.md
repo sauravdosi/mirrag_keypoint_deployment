@@ -1,6 +1,6 @@
 # Keypoint Detection Model - Staircase Predicitons for P&G
 
-## Setting up
+## Setting up:
 1. After having clonned the repository, install [Anaconda](https://www.anaconda.com/products/individual) in your Operating System.
 2. Open Anaconda Prompt and make sure you are in (base) environment. Create a virtual environment in conda using python 3.9 by following the instructions given below.
 ```
@@ -20,11 +20,36 @@ pip install -r requirements.txt
 This command will take a while to execute and install all the required packages.
 
 4. Download the keypoint-model detection [weights](). Unzip the weights file in the main directory and name the directory as weights.
-5. Open the config.py file and make changes in the following fields:
+5. Open the [config.py](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/config.py) file and make changes in the following fields:
 * Verify and edit the Database credentials if necessary
 * Edit all the path fields as required
 * Make sure to download sample videos and store them preferably in the main directory. Assign these paths to the respective variables.
 * Finally, edit the parameters as per the streaming video specifications, for how many days the violation images should be stored and the buzzer module's serial address
 
-6. Make changes in camdata.json to edit the camera's client IP, camera view and other specifications as required.
+6. Make changes in [camdata.json](https://github.com/sauravdosi/mirrag_keypoint_deployment/blob/main/camdata.json) to edit the camera's client IP, camera view and other specifications as required.
 
+## Architecture:
+
+
+
+## Running the Model:
+
+1. Open an Anaconda prompt and activate the already set up virtual environment, if not already.
+
+```
+conda activate deploytest
+```
+
+2. Run the following command:
+
+```
+python server.py
+```
+
+3. Open another Anaconda prompt and activate the virtual environment there as well. Now run the following command:
+
+```
+python client.py --cam_id 0
+```
+The value argument --cam_id is read from the camdata.json. Make sure to run the client.py file for whichever camera you need to run the model for.
+E.g. If cam_id 0 belongs to a side view camera, the server will automatically process the feed for side view.
