@@ -22,12 +22,12 @@ class ConfigTF:
                            "db_database": "mirrag_prd",
                            "db_table": "staircase_predictions"}
 
-        self.path_details = {"base_path": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection",
-                             "inference_path":"",
-                             "checkpoint_path":"/weights/saved_model",
-                             "video_path_side":"C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/side-view.mp4",
-                             "video_path_front": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/front-view.mp4",
-                             "out_path": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/violations_data"}
+        self.path_details = {"base_path": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection", ##Main directory
+                             "inference_path":"", ##Edit if required
+                             "checkpoint_path":"/weights/saved_model", ##Weights path
+                             "video_path_side":"C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/side-view.mp4", ##Side view video to be processed
+                             "video_path_front": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/front-view.mp4", ##Front view video to be processed
+                             "out_path": "C:/Users/Asus/Desktop/Mirrag/Keypoint-Detection/violations_data"} ##Directory where violation images are stored
 
         self.parameters = {"original_fps": 30, ##FPS of the original video
                            "streaming_fps": 4, ##Feed rate for frames sent to the image hub from the client to the server
